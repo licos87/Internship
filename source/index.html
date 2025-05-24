@@ -18,26 +18,51 @@
 </svg>
     примеры требуемых атрибутов data-test="*"
 -->
-<header class="header">
-  <div class="header__logo">
-    <svg class="header__logo-img">
-      <use href="/__spritemap#sprite-logo"></use>
-    </svg>
-  </div>
-  <nav class="header__nav">
-    <button class="heaader__nav-toggle" type="button">
-      Меню
-      <span class="visually-hidden">Открыть меню</span>
-    </button>
-    <ul class="nav__list">
-      <li class="nav__item"><a class="nav__link" href="#" data-test="home">Home</a></li>
-      <li class="nav__item"><a class="nav__link" href="#" data-test="about">About</a></li>
-      <li class="nav__item"><a class="nav__link" href="#" data-test="contacts">Contacts</a></li>
-    </ul>
-  </nav>
-</header>
+
 <main class="main">
-  <section class="hero" data-test="hero">hero</section>
+  <section class="hero" data-test="hero">
+    <header class="hero__header header">
+      <div class="header__logo">
+        <svg class="header__logo-img" width="30" height="30">
+          <use href="/__spritemap#sprite-logo"></use>
+        </svg>
+      </div>
+      <nav class="header__nav">
+        <button class="header__nav-toggle" type="button">
+          <span class="header__nav-toggle-text">Меню</span>
+          <span class="header__nav-toggle-icon">
+            <span class="visually-hidden"></span>
+          </span>
+        </button>
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link nav__title" href="#">О проекте</a></li>
+          <li class="nav__item">
+            <p class="nav__title">Программы</p>
+            <ul class="nav__sublist">
+              <li class="nav__subitem"><a class="nav__link" href="#">Стажировки</a></li>
+              <li class="nav__subitem"><a class="nav__link" href="#">Волонтёрство</a></li>
+              <li class="nav__subitem"><a class="nav__link" href="#">Учёба</a></li>
+              <li class="nav__subitem"><a class="nav__link" href="#">Религия</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a class="nav__link nav__title" href="#">Как поехать</a></li>
+          <li class="nav__item"><a class="nav__link nav__title" href="#">Отзывы</a></li>
+          <li class="nav__item">
+            <p class="nav__title">Новости</p>
+            <ul class="nav__sublist">
+              <li class="nav__subitem"><a class="nav__link" href="#">Общее</a></li>
+              <li class="nav__subitem"><a class="nav__link" href="#">Волонтёрство</a></li>
+              <li class="nav__subitem"><a class="nav__link" href="#">Стажировки</a></li>
+              <li class="nav__subitem"><a class="nav__link" href="#">Карьера</a></li>
+              <li class="nav__subitem"><a class="nav__link" href="#">Путешествия</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a class="nav__link nav__title">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+  </section>
+
   <section class="about" data-test="about">about</section>
   <section class="programs" data-test="programs">programs</section>
   <section class="grant" data-test="grant">grant</section>

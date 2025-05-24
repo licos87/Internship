@@ -1,0 +1,39 @@
+@mixin font-import($font-name, $file-name, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $font-name;
+    font-style: $style;
+    font-weight: $weight;
+    font-display: swap;
+    src: url("../fonts/#{$file-name}.woff2") format("woff2"),
+    url("../fonts/#{$file-name}.woff") format("woff");
+  }
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin reset-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+@mixin mobile {
+  @media (min-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}

@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid inherit;
+  background-color: $color-white;
+}
+
+.header__nav-toggle {
+  padding: 5px 5px 5px 21px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: $color-white;
+  border: 1px solid $color-primary;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.header__nav-toggle-text {
+  color: $color-primary;
+  text-transform: uppercase;
+}
+
+.header__nav-toggle-icon {
+  width: 46px;
+  height: 46px;
+  background-color: $color-primary;
+  border-radius: 50%;
+  mask-image: url("/__spritemap#sprite-menu-view") no-repeat center / 22px 22px;
+}
+
+.nav__list {
+  display: none;
+}
+
+.nav__sublist {
+  display: none;
+}

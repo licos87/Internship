@@ -1,4 +1,15 @@
 // Vendor
 // ---------------------------------
 
+// Global
 @import "vendor/normalize";
+@import "global/mixins";
+@import "global/variables";
+@import "global/utils";
+@import "global/fonts";
+@import "global/reboot";
+
+// Hero
+@import "blocks/hero";
+@import "blocks/header";
+
