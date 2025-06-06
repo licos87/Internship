@@ -1,0 +1,132 @@
+.button {
+  padding: 16px 59px 16px 21px;
+  font-family: "Manrope", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  outline: 1px solid $color-primary;
+  outline-offset: -1px;
+  border-radius: 30px;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-primary;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: $color-primary;
+    right: -13px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    mask-image: url("/__spritemap#sprite-arrow-view");
+    mask-repeat: no-repeat;
+    mask-size: 8px 8px;
+    mask-position: center;
+    background-color: $color-white;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: transform 0.3s ease;
+    transform-origin: center;
+    will-change: transform;
+    z-index: 2;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 21px 81px 21px 31px;
+    font-size: 14px;
+
+    &::after {
+      width: 46px;
+      height: 46px;
+      right: -18px;
+    }
+
+    &::before {
+      right: 8px;
+    }
+  }
+}
+
+.button:hover {
+  border: none;
+  color: $color-white;
+  background-color: $color-primary;
+
+  &::after {
+    background-color: $color-white;
+  }
+
+  &::before {
+    background-color: $color-primary;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+.button:focus {
+  &::before {
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+.button:active {
+  background-color: $color-primary;
+  color: rgba(255, 255, 255, 0.7);
+
+  &::after {
+    background-color: $color-white;
+  }
+
+  &::before {
+    background-color: $color-primary;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(45deg);
+    opacity: 0.7;
+  }
+}
+
+.button:disabled {
+  outline: 1px solid $color-disabled;
+  color: $color-disabled;
+  background-color: transparent;
+
+  &::after {
+    background-color: $color-disabled;
+  }
+
+  &::before {
+    background-color: $color-white;
+    transform-origin: center;
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+/*
+.hero__button[disabled] {
+  color: $color-disabled;
+  pointer-events: none;
+  outline: 1px solid $color-disabled;
+
+  &::after {
+    background-color: $color-disabled;
+  }
+}
+*/

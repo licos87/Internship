@@ -1,2 +1,4 @@
 **/vendor/*
 source/sass/global/reboot.scss
+node_modules
+dist
