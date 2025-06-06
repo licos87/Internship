@@ -1,0 +1,11 @@
+.hero__slider {
+	justify-self: flex-end;
+}
+
+.hero__slider-list {
+	@include reset-list;
+}
+
+.hero__slider-card {
+	background-color: $color-white;
+}

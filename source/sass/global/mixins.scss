@@ -1,4 +1,4 @@
-@mixin font-import($font-name, $file-name, $weight: normal, $style: normal) {
+@mixin font-import($font-name, $file-name, $weight: 400, $style: normal) {
   @font-face {
     font-family: $font-name;
     font-style: $style;
@@ -18,6 +18,12 @@
 @mixin reset-link {
   text-decoration: none;
   color: inherit;
+}
+
+@mixin wrapper-size {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 320px;
 }
 
 @mixin mobile {
