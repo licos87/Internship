@@ -1,5 +1,5 @@
 .programs {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     overflow: hidden;
   }
 }
@@ -12,14 +12,14 @@
   flex-direction: column;
   gap: 30px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: $tablet-width;
     padding: 50px 45px;
     gap: 40px;
     position: relative;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: $desktop-width;
     padding: 60px 100px;
   }
@@ -28,7 +28,7 @@
 .programs__container {
   position: relative;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     order: 2;
     margin-bottom: 62px;
   }
@@ -37,12 +37,12 @@
 .programs__title {
   padding: 6px 60px 4px 0;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     padding: 3px 55px 3px 0;
     max-width: 445px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     right: 100px;
     max-width: 850px;
     padding: 6px 55px 4px 0;
@@ -53,14 +53,14 @@
   order: 3;
   width: 205px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     order: 2;
     width: 234px;
     position: absolute;
     right: 45px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     right: 100px;
     margin-top: 2px;
   }
@@ -77,11 +77,11 @@
 }
 
 .programs__swiper {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     overflow: visible;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     overflow: hidden;
   }
 }
@@ -94,7 +94,7 @@
   height: auto;
   background-color: $color-beige;
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
 
   }
 }
@@ -107,12 +107,12 @@
   top: -56px;
   right: 0;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     top: 461px;
     right: 2px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
   }
 }
 
@@ -136,7 +136,7 @@
     background-color: $color-primary;
   }
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     &::before {
       right: 0;
     }
@@ -231,11 +231,11 @@
   display: grid;
   grid-template-rows: auto;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     padding: 285px 20px 10px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     padding: 280px 51px 17px 20px;
   }
 }
@@ -243,7 +243,7 @@
 .promo__container-nebo {
   --nb-r: 12px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     --nb-r: 14px;
   }
 }
@@ -256,13 +256,13 @@
   --nb-h: 5px;
   --nb-r: 18px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     min-height: 38px;
     --nb-w: 78px;
     --nb-r: 16px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     min-height: 42px;
     --nb-w: 103px;
     --nb-r: 12px;
@@ -277,14 +277,14 @@
   max-width: 146px;
   word-break: break-all;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 20px;
     line-height: 14px;
     max-width: 185px;
     padding: 18px 18px 14px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     font-size: 24px;
     line-height: 17px;
     max-width: 210px;
@@ -316,13 +316,13 @@
   font-size: 12px;
   line-height: 14px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 14px;
     line-height: 20px;
     max-width: 202px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     line-height: 18px;
     max-width: 239px;
   }
@@ -368,7 +368,7 @@
 }
 
 .programs__scrollbar {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     position: absolute;
     bottom: -52px;
     left: 0;
@@ -380,7 +380,7 @@
 }
 
 .programs__scrollbar .swiper-scrollbar-drag {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     position: absolute;
     background-color: $color-primary;
     z-index: 10;

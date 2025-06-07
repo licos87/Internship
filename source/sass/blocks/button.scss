@@ -48,7 +48,7 @@
     z-index: 2;
   }
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     padding: 21px 81px 21px 31px;
     font-size: 14px;
 

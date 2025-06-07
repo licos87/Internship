@@ -1,13 +1,24 @@
 .header {
-  min-width: 320px;
+  min-width: $mobile-width;
+  max-width: $desktop-width;
+  width: 100%;
+  padding: 20px 15px;
   margin: 0 auto;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
-  position: relative;
+
+  @include tablet {
+    padding: 30px 45px;
+  }
+
+  @include desktop {
+    padding: 30px 100px;
+  }
+}
+
+.header__container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  z-index: 20;
 }
 
 .header__logo {
@@ -20,6 +31,7 @@
   border-radius: 50%;
   background-color: $color-white;
   opacity: 1;
+  z-index: 10;
   transition: visibility $trans-default, width $trans-default 0.3s, opacity $trans-default 0.3s;
 }
 
@@ -27,13 +39,12 @@
   width: 0;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s, width $trans-default 0.3s, opacity $trans-default 0.3s;
+  transition: visibility 0s, width $trans-default, opacity $trans-default 0.3s;
 
   @include tablet {
     visibility: visible;
     width: 52px;
     opacity: 1;
-    // z-index: 20;
   }
 }
 
@@ -45,7 +56,6 @@
 }
 
 .header__nav {
-  position: absolute;
   right: 0;
   display: flex;
   flex-direction: column;
@@ -85,6 +95,10 @@
 }
 
 .header__nav-toggle-text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.02em;
   color: $color-primary;
   text-transform: uppercase;
 }
@@ -109,8 +123,15 @@
   background-color: $color-white;
 }
 
+.header__nav-list {
+  padding-inline: 25px 125px;
+  border-radius: 16px;
+  background-color: $color-primary;
+}
+
 .header__nav-list,
 .header__nav-sublist {
+  @include reset-list;
   visibility: hidden;
   width: 0;
   display: flex;
@@ -118,15 +139,8 @@
   row-gap: 0;
   line-height: 0;
   opacity: 0;
-  @include reset-list;
   transition: width $trans-default 0.3s, line-height $trans-default, opacity $trans-default, visibility $trans-default 0.3s, row-gap $trans-default,
-    padding $trans-default;
-}
-
-.header__nav-list {
-  padding-inline: 25px 125px;
-  border-radius: 16px;
-  background-color: $color-primary;
+  padding $trans-default;
 }
 
 .header__nav-list--open {

@@ -48,13 +48,13 @@
   grid-row: 1;
   z-index: 2;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: $tablet-width;
     padding: 420px 64px 60px 45px;
     align-self: end;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: $desktop-width;
     padding: 200px 372px 60px 100px;
   }
@@ -63,7 +63,7 @@
 .hero__container-nebo {
   --nb-r: 13px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     --nb-r: 14px;
   }
 }
@@ -75,7 +75,7 @@
   --nb-w: 184px;
   --nb-h: 2px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     border-radius: 18px 0 0 0;
     padding-top: 10px;
     --nb-w: 519px;
@@ -83,7 +83,7 @@
     --nb-r: 20px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     --nb-w: 829px;
     --nb-h: 2px;
   }
@@ -96,13 +96,13 @@
   --nb-h: 1px;
   --nb-r: 11px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     --nb-w: 15px;
     --nb-h: -26px;
     --nb-r: 26px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     --nb-w: 141px;
     --nb-h: -27px;
   }
@@ -114,7 +114,7 @@
   padding: 11px 15px 36px 14px;
   margin-top: -3px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-top: -4px;
     margin-bottom: -39px;
     font-size: 36px;
@@ -122,7 +122,7 @@
     padding: 13px 69px 48px 40px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     font-size: 54px;
     line-height: 62px;
     padding: 25px 50px 53px 50px;
@@ -139,7 +139,7 @@
   --nb-w: 57px;
   --nb-h: 38px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     flex-direction: row;
     padding: 15px 40px 35px 40px;
     border-radius: 0 0 26px 26px;
@@ -149,7 +149,7 @@
     --nb-h: -38px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 775px;
     padding: 15px 50px 35px 50px;
   }
@@ -165,11 +165,11 @@
   margin: 0;
   font-size: 16px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     max-width: 285px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     max-width: 446px;
   }
 }
@@ -179,13 +179,13 @@
   width: 154px;
   margin-top: 26px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-top: 0;
     width: 198px;
     height: 56px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     align-self: center;
   }
 }
@@ -214,11 +214,11 @@
   row-gap: 6px;
   align-items: center;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     padding: 15px 570px 36px 20px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     padding: 15px 875px 36px 20px;
   }
 }
@@ -233,7 +233,7 @@
   display: inline-block;
   cursor: pointer;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 12px;
     height: 12px;
   }

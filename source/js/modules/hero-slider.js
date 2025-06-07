@@ -34,6 +34,7 @@ const initSliderHero = () => {
       1440: {
         allowTouchMove: false,
         slidesPerView: 1,
+        grabCursor: false
       }
     },
 

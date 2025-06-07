@@ -3,12 +3,12 @@
 
   padding: 50px 15px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: $tablet-width;
     padding: 50px 45px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: $desktop-width;
     padding: 70px 100px;
   }
@@ -17,11 +17,11 @@
 .about__container {
   margin-bottom: 40px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-bottom: 60px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     display: grid;
     grid-template-columns: 702px 498px;
     gap: 40px;
@@ -32,11 +32,11 @@
 .about__content {
   margin-bottom: 30px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-bottom: 40px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     margin-bottom: 0;
   }
 }
@@ -44,7 +44,7 @@
 .about__content--promo {
   margin-bottom: 40px;
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 702px;
     margin-bottom: 0;
   }
@@ -53,7 +53,7 @@
 .about__title {
   margin-bottom: 20px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-bottom: 30px;
   }
 }
@@ -62,19 +62,19 @@
   font-size: 16px;
   line-height: 22px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 20px;
     line-height: 26px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     font-size: 22px;
     line-height: 32px;
   }
 }
 
 .about__content--target p {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 498px;
   }
 }
@@ -95,13 +95,13 @@
   font-weight: 400;
   color: $color-primary;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 28px;
     line-height: 100%;
     margin-bottom: 30px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     margin-bottom: 40px;
     font-size: 32px;
     line-height: 36px;
@@ -109,7 +109,7 @@
 }
 
 .about__button {
-  @media (min-width: $desktop-width) {
+  @include desktop {
     grid-column: 2/3;
     width: 279px;
   }
@@ -125,7 +125,7 @@
   background-color: $color-primary;
   border-radius: 20px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     padding: 72px 50px 50px 70px;
     flex-direction: row;
     flex-wrap: wrap;
@@ -133,7 +133,7 @@
     row-gap: 54px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     padding: 72px 100px 50px 120px;
   }
 }
@@ -161,11 +161,11 @@
     left: -20px;
   }
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 253px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 484px;
     padding: 30px 40px;
     flex-direction: row;
@@ -181,7 +181,7 @@
   letter-spacing: 0.16px;
   text-transform: uppercase;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 253px;
     font-size: 20px;
     line-height: 22px;
@@ -189,7 +189,7 @@
     max-width: 211px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     max-width: 171px;
     font-size: 26px;
     line-height: 30px;
@@ -201,7 +201,7 @@
   margin: 0;
   font-weight: 300;
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 201px;
     line-height: 20px;
   }

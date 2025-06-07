@@ -25,7 +25,7 @@
     z-index: 1;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     background-image:
       image-set(
         url("../../img/form/form-desktop@1x.webp") 1x type("image/webp"),
@@ -44,12 +44,12 @@
   grid-row: 1;
   z-index: 10;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: $tablet-width;
     padding: 186px 204px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: $desktop-width;
     padding: 296px 40px 292px;
   }
@@ -63,12 +63,12 @@
   color: $color-beige;
   margin-bottom: 20px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     gap: 24px;
     margin-bottom: 23px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     gap: 18px;
     margin-bottom: 39px;
     font-size: 54px;
@@ -82,11 +82,11 @@
   font-size: 22px;
   line-height: 100%;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 25px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     font-size: 35px;
   }
 }
@@ -97,7 +97,7 @@
   line-height: 18px;
   max-width: 220px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 16px;
     line-height: 24px;
     max-width: 100%;
@@ -113,11 +113,11 @@
   flex-direction: column;
   gap: 8px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     gap: 11px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     //flex-direction: row;
     gap: 30px;
     justify-content: center;
@@ -137,7 +137,7 @@
   top: 18px;
   transition: all 0.3s ease;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     left: 30px;
     top: 20px;
   }
@@ -155,11 +155,11 @@
   color: $color-text;
   background-color: $color-beige;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     padding: 19px 30px 18px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 360px;
   }
 }
@@ -200,12 +200,12 @@
   padding-top: 22px;
   padding-bottom: 20px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 100%;
     padding-top: 20px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 180px;
   }
 }

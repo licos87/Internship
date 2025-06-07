@@ -4,12 +4,12 @@
 
   padding: 20px 15px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: $tablet-width;
     padding: 40px 45px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: $desktop-width;
     padding: 100px 120px 77px;
   }
@@ -19,12 +19,12 @@
   padding: 17px 0 16px;
   margin-bottom: 15px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     padding: 20px 0 10px;
     margin-bottom: 25px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     padding: 45px 0 0;
     margin-bottom: 28px;
   }
@@ -34,18 +34,18 @@
   box-shadow: 0 0 20px 0 rgba(28, 51, 116, 0.1);
   position: relative;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     box-shadow: none;
   }
 }
 
 .reviews__swiper {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 743px;
     margin: -20px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 1320px;
     margin: 0;
   }
@@ -61,7 +61,7 @@
   background-color: $color-beige;
   gap: 20px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     box-shadow: 0 0 30px 0 rgba(28, 51, 116, 0.1);
     padding: 20px 30px 20px 20px;
     flex-direction: row;
@@ -70,7 +70,7 @@
     width: 565px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     box-shadow: 0 0 20px 0 rgba(28, 51, 116, 0.1);
     padding-right: 40px;
     width: 700px;
@@ -79,21 +79,21 @@
 }
 
 .reviews__slider {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     padding: 20px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     padding: 10px;
   }
 }
 
 .reviews__content {
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 299px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 352px;
   }
 }
@@ -104,11 +104,11 @@
   gap: 10px;
   margin-bottom: 15px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     margin-bottom: 25px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     margin-bottom: 2px;
   }
 }
@@ -118,7 +118,7 @@
   font-size: 12px;
   line-height: 18px;
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     font-size: 14px;
     line-height: 22px;
   }
@@ -131,7 +131,7 @@
   font-size: 12px;
   line-height: 100%;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     font-size: 13px;
   }
 }
@@ -146,7 +146,7 @@
 .reviews__buttons {
   display: none;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     display: block;
     position: absolute;
     height: 35px;
@@ -154,7 +154,7 @@
     right: 0;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     top: -63px;
   }
 }
@@ -212,12 +212,12 @@
   width: 250px;
   height: 169px;
 
-  @media (min-width: $tablet-width) {
+  @include tablet {
     width: 186px;
     height: 237px;
   }
 
-  @media (min-width: $desktop-width) {
+  @include desktop {
     width: 258px;
     height: 253px;
   }
