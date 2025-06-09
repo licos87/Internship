@@ -1,18 +1,153 @@
+.grant {
+ background-color: $color-primary;
+}
+
 .grant__wrapper {
   @include wrapper-size;
 
   padding: 70px 15px;
-  grid-column: 1;
-  grid-row: 1;
-  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 
   @include tablet {
     width: $tablet-width;
-    padding: 186px 204px;
+    padding: 100px 45px;
+    gap: 40px;
   }
 
   @include desktop {
     width: $desktop-width;
-    padding: 296px 40px 292px;
+    padding: 120px 100px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 138px;
+  }
+}
+
+.grant__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+
+  @include tablet {
+    gap: 30px;
+  }
+}
+
+.grant__title {
+  color: $color-white;
+}
+
+.grant__container p {
+  margin: 0 0 15px;
+  font-size: 14px;
+  line-height: 143%;
+  color: $color-white;
+
+  @include tablet {
+    margin: 0 0 10px;
+    font-size: 16px;
+    line-height: 125%;
+    color: $color-beige;
+    text-wrap: balance;
+  }
+
+  @include desktop {
+    line-height: 162%;
+  }
+}
+
+.grant__subtitle {
+  margin: 0 0 10px;
+  font-size: 18px;
+  line-height: 122%;
+  color: $color-white;
+
+  @include tablet {
+    margin: 0 0 5px;
+    font-size: 28px;
+    line-height: 100%;
+  }
+
+  @include desktop {
+    margin: 0 0 15px;
+    font-size: 32px;
+    line-height: 112%;
+    text-wrap: balance;
+  }
+}
+
+.grant__list {
+  @include reset-list;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  counter-increment: chapter_counter 0;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 48px;
+    row-gap: 25px;
+  }
+
+  @include desktop {
+    display: flex;
+    gap: 23px;
+  }
+}
+
+.grant__item {
+  position: relative;
+  padding: 25px 26px;
+  color: $color-white;
+  border: 1px solid $color-beige;
+  border-radius: 16px;
+
+  @include desktop {
+    padding: 31px 26px;
+  }
+}
+
+.grant__item::after {
+  content: counter(chapter_counter);
+  counter-increment: chapter_counter;
+  position: absolute;
+  top: -5px;
+  left: -15px;
+  width: 32px;
+  height: 32px;
+  padding: 7px 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  background-color: $color-primary;
+
+  @include tablet {
+    top: -15px;
+    left: -20px;
+    width: 42px;
+    height: 42px;
+    padding: 10px 0;
+    font-size: 22px;
+    letter-spacing: 0.01em;
+  }
+}
+
+.grant__item p {
+  margin: 0;
+  color: $color-white;
+}
+
+.grant__item p br {
+  display: none;
+
+  @include desktop {
+    display: block;
   }
 }

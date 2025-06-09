@@ -93,10 +93,6 @@
   width: 100%;
   height: auto;
   background-color: $color-beige;
-
-  @include desktop {
-
-  }
 }
 
 .programs__buttons {
@@ -314,16 +310,16 @@
   margin: 0;
   max-width: 188px;
   font-size: 12px;
-  line-height: 14px;
+  line-height: 117%;
 
   @include tablet {
     font-size: 14px;
-    line-height: 20px;
+    line-height: 143%;
     max-width: 202px;
   }
 
   @include desktop {
-    line-height: 18px;
+    line-height: 129%;
     max-width: 239px;
   }
 }

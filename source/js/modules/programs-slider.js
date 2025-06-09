@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import {Navigation} from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import { Scrollbar } from 'swiper/modules';
 
 const initSliderPrograms = () => {
@@ -8,7 +8,7 @@ const initSliderPrograms = () => {
     return;
   }
 
-  new Swiper('.programs__swiper',{
+  new Swiper('.programs__swiper', {
     modules: [Navigation, Scrollbar],
 
     direction: 'horizontal',
@@ -42,8 +42,8 @@ const initSliderPrograms = () => {
       1440: {
         slidesPerView: 3,
         spaceBetween: 32,
-      }
-    }
+      },
+    },
   });
 };
 

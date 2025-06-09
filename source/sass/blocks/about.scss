@@ -59,7 +59,6 @@
 }
 
 .about__content--promo p {
-  font-size: 16px;
   line-height: 22px;
 
   @include tablet {
@@ -76,6 +75,8 @@
 .about__content--target p {
   @include tablet {
     width: 498px;
+    font-size: 14px;
+    line-height: 143%;
   }
 }
 
@@ -178,13 +179,14 @@
   margin: 0;
   font-weight: 400;
   font-size: 16px;
+  line-height: 125%;
   letter-spacing: 0.16px;
   text-transform: uppercase;
 
   @include tablet {
     width: 253px;
     font-size: 20px;
-    line-height: 22px;
+    line-height: 110%;
     letter-spacing: 0.2px;
     max-width: 211px;
   }
@@ -192,13 +194,15 @@
   @include desktop {
     max-width: 171px;
     font-size: 26px;
-    line-height: 30px;
+    line-height: 115%;
     letter-spacing: 0.26px;
   }
 }
 
 .about__item p {
   margin: 0;
+  font-size: 14px;
+  line-height: 143%;
   font-weight: 300;
 
   @include desktop {

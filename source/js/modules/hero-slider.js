@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import {Pagination} from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 
 const initSliderHero = () => {
   const sliderElement = document.querySelector('.hero__swiper');
@@ -22,7 +22,7 @@ const initSliderHero = () => {
     pagination: {
       el: '.hero__pagination',
       clickable: true,
-      renderBullet: function (index, className) {
+      renderBullet: function(index, className) {
         return `<button class="${className} hero__pagination-bullet" type="button" aria-label="Выберите слайд"></button>`;
       },
       bulletClass: 'hero__pagination-bullet',
@@ -34,15 +34,15 @@ const initSliderHero = () => {
       1440: {
         allowTouchMove: false,
         slidesPerView: 1,
-        grabCursor: false
-      }
+        grabCursor: false,
+      },
     },
 
     on: {
-      init: function () {
+      init: function() {
         insertPaginationToActiveSlide(this);
       },
-      slideChange: function () {
+      slideChange: function() {
         this.slides.forEach((slide, index) => {
           const isActive = index === this.activeIndex;
           slide.querySelectorAll('a, button, input, textarea, select, [tabindex]')

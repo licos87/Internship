@@ -111,7 +111,7 @@
 .hero__title {
   font-size: 22px;
   line-height: 26px;
-  padding: 11px 15px 36px 14px;
+  padding: 11px 22px 36px 14px;
   margin-top: -3px;
 
   @include tablet {
@@ -163,7 +163,6 @@
 
 .hero__text-wrapper p {
   margin: 0;
-  font-size: 16px;
 
   @include tablet {
     max-width: 285px;
