@@ -12,14 +12,6 @@
 </head>
 
 <body class="page-body">
-<!--
-пример использования спрайта
-<img src="/__spritemap#sprite-logo-view" alt="Это спрайт">
-<svg>
-<use href="/__spritemap#sprite-user"></use>
-</svg>
-примеры требуемых атрибутов data-test="*"
--->
 
 <main class="main">
   <h1 class="visually-hidden">Организуем стажировки по всему миру</h1>
@@ -121,6 +113,7 @@
                         srcset="img/hero/hero-tablet1@1x.jpg 1x, img/hero/hero-tablet1@2x.jpg 2x">
                 <img src="img/hero/hero-mobile1@1x.jpg" width="320" height="568"
                      srcset="img/hero/hero-mobile1@2x.jpg 2x"
+                     loading="lazy"
                      alt="Радостная девушка в очках и желтой блузке, держит папку и тетради.">
               </picture>
             </div>
@@ -207,7 +200,7 @@
     </div>
   </section>
 
-  <section class="about" data-test="about">
+  <section class="about" id="about" data-test="about">
     <div class="about__wrapper">
       <div class="about__container">
         <div class="about__content about__content--promo">
@@ -245,7 +238,7 @@
     </div>
   </section>
 
-  <section class="programs" data-test="programs">
+  <section class="programs" id="programs" data-test="programs">
     <div class="programs__wrapper">
       <h2 class="programs__title title">Программы</h2>
       <a class="programs__button-all button" href="#">Все программы</a>
@@ -461,7 +454,7 @@
     </div>
   </section>
 
-  <section class="grant" data-test="grant">
+  <section class="grant" id="grant" data-test="grant">
     <div class="grant__wrapper">
       <div class="grant__container">
         <h2 class="grant__title title">Как поехать</h2>
@@ -501,7 +494,7 @@
     </div>
   </section>
 
-  <section class="news" data-test="news">
+  <section class="news" id="news" data-test="news">
     <h2 class="news__title title">Новости и материалы</h2>
 
     <div class="news__filter-swiper swiper">
@@ -616,7 +609,7 @@
     </div>
   </section>
 
-  <section class="reviews" data-test="reviews">
+  <section class="reviews" id="reviews" data-test="reviews">
     <div class="reviews__wrapper">
       <h2 class="reviews__title title">Отзывы</h2>
       <div class="reviews__container">
@@ -677,45 +670,31 @@
     </div>
   </section>
 
-  <section class="contacts" data-test="contacts">
+  <section class="contacts"  id="contacts" data-test="contacts">
     <div class="contacts__wrapper">
-      <div class="contacts__container">
-        <h2 class="contacts__title title">Контакты</h2>
-        <ul class="contacts__list">
-          <li class="contacts__item contacts__item--addres">
-            <h3 class="contacts__name">Центральный офис</h3>
-            <address class="contacts__address">
-              <p class="contacts__text">г. Новосибирск, ул. Щетинкина 68, культурный центр</p>
-            </address>
-          </li>
-          <li class="contacts__item">
-            <h3 class="contacts__name">Телефон</h3>
-            <a class="contacts__link" href="tel:896387687676">
-              <p class="contacts__text">+7 963 876 876 76</p>
-            </a>
-          </li>
-          <li class="contacts__item">
-            <h3 class="contacts__name">Email</h3>
-            <a class="contacts__link" href="mailto:info@stazh.ru">
-              <p class="contacts__text">info@stazh.ru</p>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <h2 class="contacts__title title">Контакты</h2>
+      <ul class="contacts__list">
+        <li class="contacts__item contact">
+          <h3 class="contact__title">Центральный офис</h3>
+          <address class="contact__information contact__information--address">г. Новосибирск, ул. Щетинкина 68, культурный центр</address>
+        </li>
+        <li class="contacts__item contact">
+          <h3 class="contact__title">Телефон</h3>
+          <a class="contact__information contact__information--link" href="tel:+796387687676">+7 963 876 876 76</a>
+        </li>
+        <li class="contacts__item contact">
+          <h3 class="contact__title">Email</h3>
+          <a class="contact__information contact__information--link" href="mailto:info@stazh.ru">Info@stazh.ru</a>
+        </li>
+      </ul>
       <div class="contacts__image-wrapper">
         <picture>
-          <source type="image/webp" media="(min-width: 1440px)" width="600" height="324"
-                  srcset="img/map/map-desktop@1x.webp 1x, img/map/map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" width="768" height="340"
-                  srcset="img/map/map-tablet@1x.webp 1x, img/map/map-tablet@2x.webp 2x">
-          <source type="image/webp" width="712" height="343"
-                  srcset="img/map/map-mobile@1x.webp 1x, img/map/map-mobile@2x.webp 2x">
-          <source media="(min-width: 1440px)" width="600" height="324" type="image/jpeg"
-                  srcset="img/map/map-desktop@1x.jpg 1x, img/map/map-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" width="768" height="340" type="image/jpeg"
-                  srcset="img/map/map-tablet@1x.jpg 1x, img/map/map-tablet@2x.jpg 2x">
-          <img src="img/map/map-mobile@1x.jpg" width="712" height="343" srcset="img/map/map-mobile@2x.jpg 2x"
-               alt="Карта местонахождения Lifetour">
+          <source media="(min-width: 1440px)" type="image/webp" srcset="img/contacts/map-desktop@1x.webp 1x, img/contacts/map-desktop@2x.webp 2x" width="1240" height="486">
+          <source media="(min-width: 768px)" type="image/webp" srcset="img/contacts/map-tablet@1x.webp 1x, img/contacts/map-tablet@2x.webp 2x" width="678" height="500">
+          <source type="image/webp" srcset="img/contacts/map@1x.webp 1x, img/contacts/map@2x.webp 2x" width="290" height="240">
+          <source media="(min-width: 1440px)" type="image/png" srcset="img/contacts/map-desktop@1x.png 1x, img/contacts/map-desktop@2x.png 2x" width="1240" height="486">
+          <source media="(min-width: 768px)" type="image/png" srcset="img/contacts/map-tablet@1x.png 1x, img/contacts/map-tablet@2x.png 2x" width="678" height="500">
+          <img class="contacts__map" src="img/contacts/map@1x.png" srcset="img/contacts/map@2x.png 2x" alt="Наше расположение на карте" width="290" height="240" loading="lazy">
         </picture>
       </div>
     </div>
@@ -776,7 +755,64 @@
     </div>
   </section>
 </main>
-<footer class="footer" data-test="footer">footer</footer>
+
+<footer class="footer" data-test="footer">
+  <div class="footer__wrapper">
+    <img class="footer__logo logo" src="/__spritemap#sprite-logo-view" alt="Логотип Intership" width="30" height="30" loading="lazy">
+    <nav class="footer__navigation main-navigation">
+      <ul class="main-navigation__list">
+        <li class="main-navigation__item">
+          <a class="main-navigation__link" href="#about">О проекте</a>
+        </li>
+        <li class="main-navigation__item">
+          <a class="main-navigation__link" href="#programs">Программы</a>
+        </li>
+        <li class="main-navigation__item">
+          <a class="main-navigation__link" href="#grant">Как поехать</a>
+        </li>
+        <li class="main-navigation__item">
+          <a class="main-navigation__link" href="#reviews">Отзывы</a>
+        </li>
+        <li class="main-navigation__item">
+          <a class="main-navigation__link" href="#news">Новости</a>
+        </li>
+        <li class="main-navigation__item">
+          <a class="main-navigation__link" href="#contacts">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+    <a class="footer__privacy-link" href="#">Политика конфиденциальности</a>
+    <p class="footer__disclaimer">Стажировка © 2023 Все права защищены</p>
+    <ul class="footer__social">
+      <li class="social__item">
+        <a class="social__link social__link--vk" href="https://vk.com/htmlacademy?ysclid=m8po04s37b813703056" target="_blank" rel="noopener noreferrer">
+          <svg>
+            <use href="/__spritemap#sprite-vk"></use>
+          </svg>
+          <span class="visually-hidden">ВКонтакте</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--ok" href="https://ok.ru/group/55557024251912/video/all?ysclid=m8po0q0xfg366815241" target="_blank" rel="noopener noreferrer">
+          <svg>
+            <use href="/__spritemap#sprite-ok"></use>
+          </svg>
+          <span class="visually-hidden">Одноклассники</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link social__link--reddit" href="https://www.reddit.com/r/Frontend/comments/r09z5z/best_way_to_practice_css_as_a_complete_beginner/?rdt=56537" target="_blank" rel="noopener noreferrer">
+          <svg>
+            <use href="/__spritemap#sprite-reddit"></use>
+          </svg>
+          <span class="visually-hidden">Reddit</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</footer>
+
 <script type="module" src="js/main.js"></script>
+
 </body>
 </html>

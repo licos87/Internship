@@ -16,7 +16,7 @@ function addOverlay() {
       left: '0',
       width: '100%',
       height: '100%',
-      zIndex: '10',
+      zIndex: '50',
       backgroundColor: 'rgba(13, 29, 51, 0.4)',
     };
 
