@@ -15,9 +15,8 @@ const initSliderNewsFilter = () => {
     slidesPerView: 'auto',
     initialSlide: 0,
     simulateTouch: true,
-    // allowTouchMove: true,
     watchOverflow: true,
-    // slideToClickedSlide: true,
+    slideToClickedSlide: true,
 
     breakpoints: {
       320: {
@@ -35,3 +34,6 @@ const initSliderNewsFilter = () => {
 
 initSliderNewsFilter();
 
+const slides = document.querySelectorAll('.news__filter-item');
+slides.addEventListener('click', (e) =>
+  console.log(e.target));
